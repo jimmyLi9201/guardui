@@ -1,12 +1,16 @@
 <html>
 <head>
-    <script src="../src/components/button.js" type="module"></script>
+    <script src="../src/components/authentication/accountInput.js" type="module"></script>
+    <script src="../src/components/authentication/passwordInput.js" type="module"></script>
+    <script src="../src/components/authentication/loginButton.js" type="module"></script>
 </head>
 <body>
-    
-    <g-view width="480px" height="32px" backgroundColor="#DDD"></g-view>
 
-    <g-button type="primary" marginTop="20px">默认按钮</g-button>
+    <g-account-input marginTop="20px"></g-account-input>
+
+    <g-password-input marginTop="20px"></g-password-input>
     
+    <g-login-button marginTop="20px">登录</g-login-button>
+
 </body>
 </html>

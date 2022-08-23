@@ -1,3 +1,7 @@
 # PasswordInput
 
-coming soon...
+## custom tag
+
+```html
+<g-password-input></g-password-input>
+```

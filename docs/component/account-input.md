@@ -1,3 +1,7 @@
 # AccountInput
 
-coming soon...
+## custom tag
+
+```html
+<g-account-input></g-account-input>
+```

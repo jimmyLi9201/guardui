@@ -1,15 +1,18 @@
-import GView from "./view.js";
+import GuardElement from "./element.js";
 
-export default class Button extends GView {
+export default class Button extends GuardElement {
+
+    button;
+
     constructor() {
         super();
 
-        var button = document.createElement('button');
+        this.button = document.createElement('button');
 
-        button.style.width = this.container.style.width;
-        button.style.height = this.container.style.height;
+        this.button.style.width = this.container.style.width;
+        this.button.style.height = this.container.style.height;
 
-        const type = this.getAttribute('type') || 'default';
+        const type = this.getAttribute('type') || this.getType();
 
         var backgroundColor = '#FFF';
         var textColor = '#606266';
@@ -17,21 +20,25 @@ export default class Button extends GView {
             backgroundColor = '#396AFF';
             textColor = '#FFF';
         }
-        button.style.backgroundColor = this.container.style.backgroundColor || backgroundColor;
+        this.button.style.backgroundColor = this.container.style.backgroundColor || backgroundColor;
 
-        button.style.paddingTop = this.getAttribute('paddingTop') || '12px';
-        button.style.paddingRight = this.getAttribute('paddingRight') || '20px';
-        button.style.paddingBottom = this.getAttribute('paddingBottom') || '12px';
-        button.style.paddingLeft = this.getAttribute('paddingLeft') || '20px';
-        button.style.fontSize = this.getAttribute('fontSize') || '14px';
-        button.style.borderRadius = this.getAttribute('borderRadius') || '4px';
-        button.style.border = this.getAttribute('border') || '1px solid #dcdfe6';
-        button.style.color = this.getAttribute('color') || textColor;
+        this.button.style.paddingTop = this.getAttribute('paddingTop') || '12px';
+        this.button.style.paddingRight = this.getAttribute('paddingRight') || '20px';
+        this.button.style.paddingBottom = this.getAttribute('paddingBottom') || '12px';
+        this.button.style.paddingLeft = this.getAttribute('paddingLeft') || '20px';
+        this.button.style.fontSize = this.getAttribute('fontSize') || '14px';
+        this.button.style.borderRadius = this.getAttribute('borderRadius') || '4px';
+        this.button.style.border = this.getAttribute('border') || '1px solid #dcdfe6';
+        this.button.style.color = this.getAttribute('color') || textColor;
 
-        button.innerText = this.innerHTML;
-        button.style.cursor = 'pointer';
+        this.button.innerText = this.innerHTML;
+        this.button.style.cursor = 'pointer';
 
-        this.container.append(button);
+        this.container.append(this.button);
+    }
+
+    getType() {
+        return 'default';
     }
 }
 

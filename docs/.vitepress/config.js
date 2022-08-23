@@ -44,7 +44,7 @@ export default {
               text: 'General', 
               items: [
                 {
-                  text: 'View', link: '/component/view'
+                  text: 'Element', link: '/component/element'
                 },
                 {
                   text: 'Text', link: '/component/text'
@@ -61,7 +61,7 @@ export default {
               ]
             },
             {
-              text: 'Common', 
+              text: 'Authentication', 
               items: [
                 {
                   text: 'AppLogo', link: '/component/app-logo'
@@ -70,14 +70,6 @@ export default {
                   text: 'AppName', link: '/component/app-name'
                 },
                 {
-                  text: 'ErrorText', link: '/component/error-text'
-                }
-              ]
-            },
-            {
-              text: 'Login', 
-              items: [
-                {
                   text: 'AccountInput', link: '/component/account-input'
                 },
                 {
@@ -85,9 +77,12 @@ export default {
                 },
                 {
                   text: 'LoginButton', link: '/component/login-button'
+                },
+                {
+                  text: 'ErrorText', link: '/component/error-text'
                 }
               ]
-            },
+            }
           ]
         }
       ]

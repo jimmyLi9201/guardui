@@ -1,4 +1,4 @@
-export default class GView extends HTMLElement {
+export default class GuardElement extends HTMLElement {
 
     shadow;
     container;
@@ -23,4 +23,4 @@ export default class GView extends HTMLElement {
     }
 }
 
-window.customElements.define('g-view', GView);
+window.customElements.define('g-element', GuardElement);

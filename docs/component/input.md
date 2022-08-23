@@ -1,3 +1,7 @@
 # Input
 
-coming soon...
+## custom tag
+
+```html
+<g-input></g-input>
+```
