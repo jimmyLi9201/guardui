@@ -16,8 +16,8 @@ Guard UI is based on W3C's web component standard and it is open sourced.
 
 Before started, please prepare the following:
 
-- Create an [Authing account](https://www.authing.cn/) for freee
-- At Authing console [create an application](https://docs.authing.cn/v2/guides/app/create-app.html)
+- Create an [Authing account](https://www.authing.cn/) for free
+- [create an application](https://docs.authing.cn/v2/guides/app/create-app.html) at Authing console
 - Install your favorite code editor
 
 <br>

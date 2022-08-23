@@ -4,6 +4,7 @@ export default {
   themeConfig: {
     siteTitle: 'Guard UI',
     logo: '/authing-logo.svg',
+
     nav: [
       { text: 'Guide', link: '/guide/'},
       { text: 'Component', link: '/component/' },
@@ -16,6 +17,11 @@ export default {
       //   ]
       // },
     ],
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/lancemao/guardui' }
+    ],
+
     sidebar: {
       // This sidebar gets displayed when user is
       // under `guide` directory.
