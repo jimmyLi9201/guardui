@@ -2,7 +2,7 @@
 
 Although you can use any framework you like, in this tutorial, we will use plain html/css/javascript so that we can keep things as simple as possible.
 
-So to get started, open your favorite code editor and create a folder to hold your files. Within that folder create index.html and we are good to go.
+To get started, open your favorite code editor and create a folder to hold your files. Within that folder create index.html and we are good to go.
 
 Let's build a custom login page and see how Guard UI works.
 
@@ -62,8 +62,12 @@ complete code:
 </html>
 ```
 
+::: tip
+You should replace appId with your own Authing app ID
+:::
+
 with code above, your browser should show:
 
 <img src="./images/login_page.png" alt="drawing" width="300"/>
 
-and voila, you have built a working login page.
+There you go, you have built a working login page.

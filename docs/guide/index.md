@@ -4,19 +4,20 @@ With Guard UI, you can build your auth flow really quick and it's very easy to c
 
 Guard UI is based on W3C's web component standard and it is open sourced.
 
-## 代码地址
 
-| 条目     | 说明                                        |
+| Browser     | Version                                        |
 | -------- | ------------------------------------------- |
-| 支持浏览器 | Chrome、Edge、Firefox 
-| 仓库地址 | [https://github.com/lancemao/guardui](https://github.com/lancemao/guardui) |
+| Google Chrome | Latest
+| Microsoft Edge | Latest |
+| Apple Safari | Latest |
+| Mozilla Firefox | Latest |
 
-## 开始之前
+## Preparation
 
-在开始开发之前，需要准备以下内容：
+Before started, please prepare the following:
 
-- 免费创建一个 [Authing 帐号](https://www.authing.cn/)
-- 在 Authing 控制台 [创建一个自建应用](https://docs.authing.cn/v2/guides/app/create-app.html)
-- 安装你喜欢的代码编辑器
+- Create an [Authing account](https://www.authing.cn/) for freee
+- At Authing console [create an application](https://docs.authing.cn/v2/guides/app/create-app.html)
+- Install your favorite code editor
 
 <br>

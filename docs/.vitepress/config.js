@@ -1,4 +1,5 @@
 export default {
+  title: 'Guard UI',
   base: '/guardui/',
   themeConfig: {
     siteTitle: 'Guard UI',

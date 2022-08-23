@@ -1,4 +1,15 @@
-# Semantic UI components
+<div align="center">
+  <h1 style="font-size:48px"> Guard UI </h1>
+  <br />
+  <div>A semantic UI component library for authentication</div>
+
+  <img src="./images/guard_index.png" />
+
+  <a href="./guide/" style="color:#FFF;margin-top: 32px;background-color: #0170fe;a:link:color:#FFF;padding:8px;border-radius: 20px; padding: 12px 28px;cursor: pointer;">Start</a>
+
+</div>
+
+
 
 <!-- | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
