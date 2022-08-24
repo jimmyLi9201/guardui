@@ -6,10 +6,16 @@ export default class LoginButton extends Button {
 
         this.button.style.width = this.container.style.width || '380px';
 
-        this.button.addEventListener('click', ()=> {
-            const btn = document.getElementsByTagName('g-button');
-            console.log(btn)
-        });
+        this.button.onclick = ()=> {
+            const [accountInput] = document.getElementsByTagName('g-account-input');
+            const [passwordInput] = document.getElementsByTagName('g-password-input');
+            if (accountInput !== undefined && passwordInput !== undefined) {
+                const account = accountInput.getText();
+                const password = passwordInput.getText();
+
+                // TODO login
+            }
+        };
     }
 
     getType() {

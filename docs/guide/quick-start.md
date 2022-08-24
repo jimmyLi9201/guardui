@@ -15,7 +15,7 @@ Let's build a custom login page and see how Guard UI works.
 ## Step 2: init
 
 ```javascript
-const guard = new Guard({appId: 'your authing app id'})
+const guard = await Guard.initialize({appId: 'your authing app id'})
 ```
 
 ## Step 3: add component
@@ -53,7 +53,7 @@ complete code:
     <g-login-button marginTop="8px"></g-login-button>
 
     <script>
-        const guard = new Guard({appId: '60caaf41df670b771fd08937'});
+        const guard = await Guard.initialize({appId: '60caaf41df670b771fd08937'});
         guard.on('login', (code, message, userInfo) => {
             console.log(userInfo);
         });
@@ -63,7 +63,7 @@ complete code:
 ```
 
 ::: tip
-You should replace appId with your own Authing app ID
+Replace appId with your own Authing app ID
 :::
 
 with code above, your browser should show:

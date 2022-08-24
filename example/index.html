@@ -12,5 +12,12 @@
     
     <g-login-button marginTop="20px">登录</g-login-button>
 
+    <script type="module">
+        import Guard from '../src/guard.js'
+
+        const guard = await Guard.initialize({appId: "60caaf41df670b771fd08937"});
+        console.log(guard);
+    </script>
+
 </body>
 </html>

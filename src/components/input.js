@@ -17,6 +17,10 @@ export default class Input extends GuardElement {
 
         this.container.append(this.input);
     }
+
+    getText() {
+        return this.input.value;
+    }
 }
 
 window.customElements.define('g-input', Input);

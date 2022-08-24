@@ -8,9 +8,9 @@ Guard UI is based on W3C's web component standard and it is open sourced.
 | Browser     | Version                                        |
 | -------- | ------------------------------------------- |
 | Google Chrome | Latest
-| Microsoft Edge | Latest |
+| Microsoft Edge | 79+ |
 | Apple Safari | Latest |
-| Mozilla Firefox | Latest |
+| Mozilla Firefox | 63+ |
 
 ## Preparation
 
