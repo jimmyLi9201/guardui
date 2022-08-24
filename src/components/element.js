@@ -16,6 +16,7 @@ export default class GuardElement extends HTMLElement {
         this.container.style.marginRight = this.getAttribute('marginRight');
         this.container.style.marginBottom = this.getAttribute('marginBottom');
         this.container.style.marginLeft = this.getAttribute('marginLeft');
+        this.container.style.borderRadius = this.getAttribute('borderRadius');
 
         var template = document.createElement('template');
         var html = this.innerHTML.trim();

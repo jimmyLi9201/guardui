@@ -5,6 +5,10 @@ export default class LoginButton extends Button {
         super();
 
         this.button.style.width = this.container.style.width || '380px';
+        this.button.style.height = this.container.style.height || '42px';
+        if (this.button.innerText === undefined || this.button.innerText.length === 0) {
+            this.button.innerText = '登录'
+        }
 
         this.button.onclick = ()=> {
             const [accountInput] = document.getElementsByTagName('g-account-input');
