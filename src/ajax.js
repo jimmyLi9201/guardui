@@ -9,7 +9,7 @@ function isExpired(cache) {
     return Date.now() - cache.timestamp > 5000
 }
 
-export async function request(url) {
+export async function get(url) {
     if (caches[url] !== undefined && !isExpired(caches[url])) {
         return Promise.resolve(caches[url].data)
     }

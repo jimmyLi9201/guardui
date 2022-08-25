@@ -8,7 +8,6 @@ export default class AppName extends Text {
 
         this.label.style.fontSize = this.getAttribute('fontSize') || '24px';
         this.label.style.fontWeight = this.getAttribute('fontWeight') || '600';
-        this.label.style.fontFamily = this.getAttribute('fontFamily') || 'sans-serif';
 
         const guard = Guard.getInstance(this);
         if (!guard.isGettingConfig) {

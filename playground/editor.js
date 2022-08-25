@@ -7,21 +7,27 @@ require(['vs/editor/editor.main'], function () {
     var output;
 
     var defaultHTML = 
-`<g-h-layout backgroundColor="rgb(248, 249, 255)" width="100%" height="100%" justifyContent="center" alignItems="center">
-    <g-v-layout backgroundColor="#FFF" width="456px" height="661px" borderRadius="8px" padding="16px">
-        <g-app-logo marginTop="24px"></g-app-logo>
-        <g-app-name marginTop="20px"></g-app-name>
-        <g-account-input marginTop="20px"></g-account-input>
-        <g-password-input marginTop="20px"></g-password-input>
-        <g-login-button marginTop="20px">登录</g-login-button>
-    </g-v-layout>
-</g-h-layout>
+`<g-guard>
+    <g-guard-container>
+        <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
+        <g-app-name marginBottom="20px"></g-app-name>
+        <g-account-input marginBottom="20px"></g-account-input>
+        <g-password-input marginBottom="20px"></g-password-input>
+        <g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>
+        <g-login-button marginBottom="20px"></g-login-button>
+    </g-guard-container>
+</g-guard>
 `
     const defaultJS = 
 `import Guard from '../src/guard.js'
 // 62345c87ffe7c884acbae53c
-const guard = await Guard.initialize({appId: "60caaf41df670b771fd08937"});
-console.log(guard);
+const guard = await Guard.initialize({appId: "62ac18c93134e5fafcd29435"});
+guard.on('login', (code, message, userInfo) => {
+    if (code === 200) {
+        console.log(userInfo);
+        guard.showToast('登录成功，欢迎你：' + userInfo.nickname);
+    }
+});
 `
 
     // 定义编辑器主题
@@ -36,6 +42,116 @@ console.log(guard);
     htmlEditor = monaco.editor.create(document.getElementById('htmlEditor'), {
         model: htmlModel,
         minimap: { enabled: false },
+    });
+
+    monaco.languages.registerCompletionItemProvider('html', {
+        provideCompletionItems: () => {
+            var suggestions = [
+                {
+                    label: 'backgroundColor',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: 'backgroundColor="$0"',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'alignItems',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: 'alignItems="${1:center}"',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'justifyContent',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: 'justifyContent="${1:center}"',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'marginLeft',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: 'marginLeft="$0px"',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'marginRight',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: 'marginRight="$0px"',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'marginBottom',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: 'marginBottom="$0px"',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'marginTop',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: 'marginTop="$0px"',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'vlayout',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-v-layout>$0</g-v-layout>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'hlayout',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-h-layout>$0</g-h-layout>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'guard',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-guard>$0</g-guard>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'guard-container',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-guard-container>$0</g-guard-container>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'app-logo',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'app-name',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-app-name marginBottom="20px"></g-app-name>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'account-input',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-account-input marginBottom="20px"></g-account-input>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'password-input',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-password-input marginBottom="20px"></g-password-input>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'error-text',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'login-button',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-login-button marginBottom="20px"></g-login-button>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                }
+            ];
+            return { suggestions: suggestions };
+        }
     });
 
     var jsModel = monaco.editor.createModel(defaultJS, 'javascript');

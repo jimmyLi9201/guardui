@@ -21,6 +21,7 @@ export default class Button extends GuardElement {
             textColor = '#FFF';
         }
         this.button.style.backgroundColor = this.container.style.backgroundColor || backgroundColor;
+        this.container.style.backgroundColor = 'transparent';
 
         this.button.style.paddingTop = this.getAttribute('paddingTop') || '12px';
         this.button.style.paddingRight = this.getAttribute('paddingRight') || '20px';

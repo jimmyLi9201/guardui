@@ -1,6 +1,6 @@
-import Input from "../input.js";
+import BaseInput from "./baseInput.js";
 
-export default class PasswordInput extends Input {
+export default class PasswordInput extends BaseInput {
 
     constructor() {
         super();

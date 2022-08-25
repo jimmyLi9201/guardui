@@ -13,10 +13,11 @@ export default class Text extends GuardElement {
         this.label.style.height = this.container.style.height;
 
         var textColor = '#202020';
-        this.label.style.fontSize = this.getAttribute('fontSize') || '14px';
         this.label.style.color = this.getAttribute('color') || textColor;
+        this.label.style.fontFamily = this.getAttribute('fontFamily') || 'sans-serif';
+        this.label.style.fontSize = this.getAttribute('fontSize') || '14px';
 
-        this.label.innerText = this.innerHTML;
+        this.label.innerHTML = this.innerHTML;
 
         this.container.append(this.label);
     }
