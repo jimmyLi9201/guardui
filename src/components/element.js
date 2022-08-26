@@ -1,14 +1,21 @@
 export default class GuardElement extends HTMLElement {
 
+    // for now, we don't use shadow
+    useShadow = false;
+
     shadow;
     container;
 
     constructor() {
         super();
 
-        this.shadow = this.attachShadow( { mode: 'open' } );
+        if (this.useShadow) {
+            this.shadow = this.attachShadow( { mode: 'open' } );
+            this.container = document.createElement('div');
+        } else {
+            this.container = this;
+        }
 
-        this.container = document.createElement('div');
         this.container.style.width = this.getAttribute('width');
         this.container.style.height = this.getAttribute('height');
         this.container.style.backgroundColor = this.getAttribute('backgroundColor');
@@ -18,15 +25,18 @@ export default class GuardElement extends HTMLElement {
         this.container.style.marginLeft = this.getAttribute('marginLeft');
         this.container.style.borderRadius = this.getAttribute('borderRadius');
 
-        var template = document.createElement('template');
-        var html = this.innerHTML.trim();
-        template.innerHTML = html;
-        const child = template.content.firstChild;
-        if (child instanceof HTMLElement) {
-            this.container.insertAdjacentHTML('afterbegin', this.innerHTML)
+        if (this.useShadow) {
+            var template = document.createElement('template');
+            var html = this.innerHTML.trim();
+            template.innerHTML = html;
+            const child = template.content.firstChild;
+            if (child instanceof HTMLElement) {
+                this.container.insertAdjacentHTML('afterbegin', this.innerHTML)
+            }
+            
+            this.appendChild(this.container)
+            this.shadow.appendChild(this.container);
         }
-        
-        this.shadow.appendChild(this.container);
     }
 }
 

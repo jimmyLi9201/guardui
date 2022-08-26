@@ -25,7 +25,9 @@ const guard = await Guard.initialize({appId: "62ac18c93134e5fafcd29435"});
 guard.on('login', (code, message, userInfo) => {
     if (code === 200) {
         console.log(userInfo);
-        guard.showToast('登录成功，欢迎你：' + userInfo.nickname);
+        guard.message.success('登录成功，欢迎你：' + userInfo.nickname);
+    } else {
+        guard.message.error(message);
     }
 });
 `

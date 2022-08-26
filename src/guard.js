@@ -1,5 +1,6 @@
 import { get } from './ajax.js'
 import JSEncrypt from './jsencrypt.js';
+import Message from './message.js';
 
 export default class Guard {
     
@@ -14,9 +15,12 @@ export default class Guard {
     listeners = [];
     eventHandlers = {};
 
+    message;
+
     constructor(options) {
         if (!Guard.instance) {
             Guard.instance = this;
+            this.message = new Message();
         }
         if (options) {
             Guard.instance.options = options;
@@ -74,15 +78,6 @@ export default class Guard {
                 }
             });
         }
-    }
-
-    showToast(text) {
-        var toast = document.querySelector('g-toast')
-        if (toast == undefined) {
-            toast = document.createElement('g-toast');
-            document.body.appendChild(toast);
-        }
-        toast.success(text)
     }
 
     async loginByAccount(account, password) {

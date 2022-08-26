@@ -5,6 +5,11 @@ export default class Toast extends GuardElement {
     constructor() {
         super();
 
+        // must use shadow dom otherwise if we call document.createElement('g-toast');
+        // it will produce: Failed to construct 'CustomElement': The result must not have attributes
+        this.shadow = this.attachShadow( { mode: 'open' } );
+        this.container = document.createElement('div');
+
         this.container.id = 'toast';
 
         let svg = `<svg t="1661415519631" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4575" width="16" height="16"><path d="M512 938.672C276.352 938.672 85.328 747.648 85.328 512 85.328 276.352 276.352 85.328 512 85.328c235.648 0 426.672 191.024 426.672 426.672 0 235.648-191.024 426.672-426.672 426.672z m-42.544-256L771.12 380.96l-60.336-60.336-241.328 241.36-120.704-120.704-60.32 60.336L469.44 682.672z" fill="#1EB76D" p-id="4576"></path></svg>`;
@@ -13,6 +18,8 @@ export default class Toast extends GuardElement {
         let image = document.createElement('img');
         image.src = url;
         image.addEventListener('load', () => URL.revokeObjectURL(url), {once: false});
+        image.style.width = '16px';
+        image.style.height = '16px';
         this.image = image;
         this.container.append(this.image);
 
@@ -33,13 +40,13 @@ export default class Toast extends GuardElement {
                 display: flex;
                 align-items: center;
                 visibility: hidden;
-                min-width: 200px;
-                margin-left: -100px;
+                min-width: 150px;
+                margin-left: -75px;
                 background-color: #FFF;
                 color: #202020;
                 border-radius: 2px;
                 padding: 8px 16px;
-                position: fixed;
+                position: absolute;
                 z-index: 1;
                 left: 50%;
                 top: 10px;
@@ -76,6 +83,7 @@ export default class Toast extends GuardElement {
         `;
         this.shadow.appendChild(styleEle);
 
+        this.shadow.appendChild(this.container);
     }
 
     setImage(svg) {
@@ -91,7 +99,8 @@ export default class Toast extends GuardElement {
     }
 
     error(text) {
-        let svg = `<svg t="1661417943729" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4863" width="16" height="16"><path d="M512 451.67l211.2-211.2 60.33 60.33L572.33 512l211.2 211.2-60.33 60.33L512 572.33l-211.2 211.2-60.33-60.33L451.67 512l-211.2-211.2 60.33-60.33L512 451.67z" p-id="4864"></path></svg>`;
+        let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="#D81B60" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg>`;
         this.setImage(svg);
         this.show(text);
     }
