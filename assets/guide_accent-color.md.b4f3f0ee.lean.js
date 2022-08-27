@@ -1,0 +1,1 @@
+import{_ as a,c as s,o,a as n}from"./app.9d5e3999.js";const D=JSON.parse('{"title":"Accent color","description":"","frontmatter":{},"headers":[],"relativePath":"guide/accent-color.md"}'),c={name:"guide/accent-color.md"},e=n("",4),t=[e];function l(p,r,d,i,_,y){return o(),s("div",null,t)}const C=a(c,[["render",l]]);export{D as __pageData,C as default};
