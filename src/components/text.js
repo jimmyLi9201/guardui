@@ -17,7 +17,8 @@ export default class Text extends GuardElement {
         this.label.style.fontFamily = this.getAttribute('fontFamily') || 'sans-serif';
         this.label.style.fontSize = this.getAttribute('fontSize') || '14px';
 
-        this.label.innerHTML = this.innerHTML;
+        this.label.textContent = this.innerHTML;
+        this.innerHTML = ''
 
         this.container.append(this.label);
     }

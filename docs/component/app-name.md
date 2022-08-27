@@ -1,3 +1,7 @@
 # AppName
 
-coming soon...
+## custom tag
+
+```html
+<g-app-name></g-app-name>
+```

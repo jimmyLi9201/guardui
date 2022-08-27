@@ -16,6 +16,7 @@ export default class Guard {
     eventHandlers = {};
 
     message;
+    accentColor = '#396AFF';
 
     constructor(options) {
         if (!Guard.instance) {
@@ -40,7 +41,7 @@ export default class Guard {
             guard.config = response.data;
 
             guard.listeners.forEach(listener => {
-                listener.fire(guard);
+                listener.configCallback(guard);
             })
             // guard.listeners = [];
         } catch (err) {
@@ -78,6 +79,21 @@ export default class Guard {
                 }
             });
         }
+    }
+
+    getAccentColor() {
+        return this.accentColor;
+    }
+
+    setAccentColor(accent) {
+        this.accentColor = accent;
+        this.listeners.forEach(listener => {
+            if (listener) {
+                try {
+                    listener.renderCallback(this);
+                } catch (err) {}
+            }
+        })
     }
 
     async loginByAccount(account, password) {

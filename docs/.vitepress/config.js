@@ -31,6 +31,8 @@ export default {
           link: '/guide/',
           items: [
             { text: 'Quick start', link: '/guide/quick-start' },
+            { text: 'Background image', link: '/guide/background-image' },
+            { text: 'Accent color', link: '/guide/accent-color' },
           ]
         }
       ],
@@ -64,6 +66,12 @@ export default {
               text: 'Authentication', 
               items: [
                 {
+                  text: 'Guard', link: '/component/guard'
+                },
+                {
+                  text: 'GuardContainer', link: '/component/guard-container'
+                },
+                {
                   text: 'AppLogo', link: '/component/app-logo'
                 },
                 {
@@ -87,8 +95,5 @@ export default {
         }
       ]
     }
-  },
-  markdown: {
-    lineNumbers: true
   }
 }

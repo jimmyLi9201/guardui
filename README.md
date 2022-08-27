@@ -24,6 +24,7 @@ A semantic UI component library based on W3C's web component standard.
 
 * General UI components like Ant/Element UI
 * Drop-in authentication related components
+* Flexible for customization
 
 ## 👨‍💻 Development
 

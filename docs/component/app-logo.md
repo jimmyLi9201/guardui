@@ -1,3 +1,7 @@
 # AppLogo
 
-coming soon...
+## custom tag
+
+```html
+<g-app-logo></g-app-logo>
+```

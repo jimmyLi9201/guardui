@@ -24,6 +24,10 @@ export default class GuardElement extends HTMLElement {
         this.container.style.marginBottom = this.getAttribute('marginBottom');
         this.container.style.marginLeft = this.getAttribute('marginLeft');
         this.container.style.borderRadius = this.getAttribute('borderRadius');
+        this.container.style.backgroundPosition = this.getAttribute('backgroundPosition') || 'center';
+        this.container.style.backgroundRepeat = this.getAttribute('backgroundRepeat') || 'no-repeat';
+        this.container.style.backgroundSize = this.getAttribute('backgroundSize') || 'cover';
+        this.container.style.backgroundImage = this.getAttribute('backgroundImage');
 
         if (this.useShadow) {
             var template = document.createElement('template');
@@ -37,6 +41,12 @@ export default class GuardElement extends HTMLElement {
             this.appendChild(this.container)
             this.shadow.appendChild(this.container);
         }
+    }
+
+    configCallback(guard) {
+    }
+
+    renderCallback(guard) {
     }
 }
 

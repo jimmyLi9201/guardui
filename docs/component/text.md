@@ -1,3 +1,7 @@
 # Text
 
-coming soon...
+## custom tag
+
+```html
+<g-text></g-text>
+```

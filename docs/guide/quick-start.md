@@ -21,12 +21,16 @@ const guard = await Guard.initialize({appId: 'your authing app id'})
 ## Step 3: add component
 
 ```html
-<g-app-logo></g-app-logo>
-<g-app-name></g-app-name>
-<g-account-input></g-account-input>
-<g-password-input></g-password-input>
-<g-error-text></g-error-text>
-<g-login-button></g-login-button>
+<g-guard>
+    <g-guard-container>
+        <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
+        <g-app-name marginBottom="20px"></g-app-name>
+        <g-account-input marginBottom="20px" text=""></g-account-input>
+        <g-password-input marginBottom="20px" text=""></g-password-input>
+        <g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>
+        <g-login-button marginBottom="20px"></g-login-button>
+    </g-guard-container>
+</g-guard>
 ```
 
 ## Step 4: handling result
@@ -45,12 +49,16 @@ complete code:
     <script src="https://unpkg.com/guard-ui/lib/index.js"></script>
 </head>
 <body>
-    <g-app-logo></g-app-logo>
-    <g-app-name marginTop="16px"></g-app-name>
-    <g-account-input marginTop="16px"></g-account-input>
-    <g-password-input marginTop="8px"></g-password-input>
-    <g-error-text marginTop="8px"></g-error-text>
-    <g-login-button marginTop="8px"></g-login-button>
+    <g-guard>
+        <g-guard-container>
+            <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
+            <g-app-name marginBottom="20px"></g-app-name>
+            <g-account-input marginBottom="20px" text=""></g-account-input>
+            <g-password-input marginBottom="20px" text=""></g-password-input>
+            <g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>
+            <g-login-button marginBottom="20px"></g-login-button>
+        </g-guard-container>
+    </g-guard>
 
     <script>
         const guard = await Guard.initialize({appId: '60caaf41df670b771fd08937'});
@@ -68,6 +76,6 @@ Replace appId with your own Authing app ID
 
 with code above, your browser should show:
 
-<img src="./images/login_page.png" alt="drawing" width="300"/>
+<img src="./images/login_page.png"/>
 
 There you go, you have built a working login page.

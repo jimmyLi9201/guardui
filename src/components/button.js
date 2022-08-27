@@ -1,4 +1,5 @@
 import GuardElement from "./element.js";
+import Guard from "../guard.js";
 
 export default class Button extends GuardElement {
 
@@ -14,10 +15,11 @@ export default class Button extends GuardElement {
 
         const type = this.getAttribute('type') || this.getType();
 
+        const guard = Guard.getInstance(this);
         var backgroundColor = '#FFF';
         var textColor = '#606266';
         if (type === 'primary') {
-            backgroundColor = '#396AFF';
+            backgroundColor = guard.getAccentColor();
             textColor = '#FFF';
         }
         this.button.style.backgroundColor = this.container.style.backgroundColor || backgroundColor;
@@ -40,6 +42,13 @@ export default class Button extends GuardElement {
 
     getType() {
         return 'default';
+    }
+
+    renderCallback(guard) {
+        const type = this.getAttribute('type') || this.getType();
+        if (type === 'primary') {
+            this.button.style.backgroundColor = guard.getAccentColor();
+        }
     }
 }
 

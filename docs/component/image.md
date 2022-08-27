@@ -1,3 +1,8 @@
 # Image
 
-coming soon...
+
+## custom tag
+
+```html
+<g-image></g-image>
+```

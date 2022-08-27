@@ -15,7 +15,7 @@ export default class AppName extends Text {
         }
     }
 
-    fire(guard) {
+    configCallback(guard) {
         this.label.textContent = guard.config.name
     }
 }

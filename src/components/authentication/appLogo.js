@@ -15,7 +15,7 @@ export default class AppLogo extends Image {
         }
     }
 
-    fire(guard) {
+    configCallback(guard) {
         this.img.setAttribute('src', guard.config.logo);
     }
 }
