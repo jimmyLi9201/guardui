@@ -1,0 +1,12 @@
+# Playground
+ 
+To quickly do some experiment, please check out our [Guard UI Playground](http://wecloudapp.com/guard-ui-playground/)
+
+## Instantly refresh
+
+As you `place` your components on the top left editor, the preview on the right will immediate update. This is the same for the javascript on the bottom left area.
+
+## Code completion
+
+Our custom tag names are intuitive, so type the names that first come to your mind and mostly likely it is what you want. For example, account-input, login-button etc.
+

@@ -1,4 +1,4 @@
-# Background image
+# Background Image
 
 Every Guard component has a 'backgroundImage' attribute. The most commonly used case is to set a background image for the `g-guard` component, which is usually the root.
 

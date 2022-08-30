@@ -1,4 +1,4 @@
-require.config({ paths: { 'vs': '../node_modules/monaco-editor/min/vs' } });
+require.config({ paths: { 'vs': './node_modules/monaco-editor/min/vs' } });
 require(['vs/editor/editor.main'], function () {
 
     // 初始化变量
@@ -19,13 +19,14 @@ require(['vs/editor/editor.main'], function () {
 </g-guard>
 `
     const defaultJS = 
-`import Guard from '../src/guard.js'
+`import { Guard } from 'https://unpkg.com/guard-ui/dist/index.mjs'
+
 // 62345c87ffe7c884acbae53c
 const guard = await Guard.initialize({appId: "62ac18c93134e5fafcd29435"});
 guard.on('login', (code, message, userInfo) => {
     if (code === 200) {
         console.log(userInfo);
-        guard.message.success('登录成功，欢迎你：' + userInfo.nickname);
+        guard.message.success('Welcome! ' + userInfo.nickname);
     } else {
         guard.message.error(message);
     }

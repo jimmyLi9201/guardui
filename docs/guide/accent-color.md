@@ -1,4 +1,4 @@
-# Accent color
+# Accent Color
 
 You can change your brand color by calling:
 

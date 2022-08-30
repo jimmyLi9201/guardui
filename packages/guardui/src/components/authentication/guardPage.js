@@ -1,7 +1,6 @@
-import HLayoutElement from "../hlayout.js";
-import Toast from "../toast.js";
+import HLayout from "../hlayout.js";
 
-export default class GuardPage extends HLayoutElement {
+export default class GuardPage extends HLayout {
 
     constructor() {
         super();

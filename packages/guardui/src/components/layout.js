@@ -1,6 +1,6 @@
 import GuardElement from "./element.js";
 
-export default class LayoutElement extends GuardElement {
+export default class Layout extends GuardElement {
 
     constructor() {
         super();
@@ -12,4 +12,4 @@ export default class LayoutElement extends GuardElement {
     }
 }
 
-window.customElements.define('g-layout', LayoutElement);
+window.customElements.define('g-layout', Layout);

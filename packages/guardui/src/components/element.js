@@ -16,6 +16,7 @@ export default class GuardElement extends HTMLElement {
             this.container = this;
         }
 
+        this.container.style.flex = this.getAttribute('flex');
         this.container.style.width = this.getAttribute('width');
         this.container.style.height = this.getAttribute('height');
         this.container.style.backgroundColor = this.getAttribute('backgroundColor');
