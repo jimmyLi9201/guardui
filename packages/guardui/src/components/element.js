@@ -31,8 +31,8 @@ export default class GuardElement extends HTMLElement {
         this.container.style.backgroundImage = this.getAttribute('backgroundImage');
 
         if (this.useShadow) {
-            var template = document.createElement('template');
-            var html = this.innerHTML.trim();
+            let template = document.createElement('template');
+            let html = this.innerHTML.trim();
             template.innerHTML = html;
             const child = template.content.firstChild;
             if (child instanceof HTMLElement) {

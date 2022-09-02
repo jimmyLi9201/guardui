@@ -3,8 +3,12 @@
 You can change your brand color by calling:
 
 ```js
-const guard = Guard.getInstance();
-guard.setAccentColor('#F00');
+const guard = await Guard.initialize({appId: "62345c87ffe7c884acbae53c"});
+guard.setAccentColor('#c50019');
 ```
 
-Component that has a tint color, for example a `g-button` with `type='primary'`, will change it's tint color accordingly.
+Component that has a tint color will change accordingly. For example a `g-button` with `type='primary'` or an input's border color when focused.
+
+With code above, we will get a page like the following:
+
+<img src="./images/accent_color.png" />

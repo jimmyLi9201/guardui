@@ -14,6 +14,7 @@ export default {
     nav: [
       { text: 'Guide', link: '/guide/'},
       { text: 'Component', link: '/component/' },
+      { text: 'APIs', link: '/apis/' },
       // {
       //   text: 'Dropdown Menu',
       //   items: [
@@ -37,11 +38,6 @@ export default {
           items: [
             { text: 'Getting Started', link: '/guide/getting-started' },
             { text: 'Playground', link: '/guide/playground' },
-          ]
-        },
-        {
-          text: 'Customization',
-          items: [
             { text: 'Background Image', link: '/guide/background-image' },
             { text: 'Accent Color', link: '/guide/accent-color' },
           ]
@@ -49,10 +45,32 @@ export default {
         {
           text: 'More Pages',
           items: [
+            { text: 'Guard Router', link: '/guide/router' },
             { text: 'Register', link: '/guide/register' },
-            { text: 'Change Password', link: '/guide/change-password' },
+            { text: 'Reset Password', link: '/guide/reset-password' },
+            { text: 'Advanced Login', link: '/guide/advanced-login' },
+            { text: 'Advanced Register', link: '/guide/advanced-register' },
           ]
-        }
+        },
+        {
+          text: 'Methods',
+          collapsible: true,
+          items: [
+            { text: 'Initialize', link: '/guide/methods/initialize' },
+            { text: 'Get Guard Instance', link: '/guide/methods/get-guard-instance' },
+            { text: 'Logout', link: '/guide/methods/logout' },
+            { text: 'Handle Events', link: '/guide/methods/handle-events' },
+            { text: 'Get User Info', link: '/guide/methods/get-user-info' },
+            { text: 'Check Login Status', link: '/guide/methods/check-login-status' },
+            { text: 'Change Language', link: '/guide/methods/change-language' },
+          ]
+        },
+        {
+          text: 'Case Study',
+          items: [
+            { text: 'Coca-Cola', link: '/guide/case-study/coca-cola' },
+          ]
+        },
       ],
 
       '/component/': [
@@ -107,7 +125,56 @@ export default {
             }
           ]
         }
+      ],
+
+      '/apis/': [
+        {
+          text: 'Authentication',
+          collapsible: true,
+          items: [
+            {
+              text: 'Login by Username', link: ''
+            },
+            {
+              text: 'Login by Email', link: ''
+            },
+            {
+              text: 'Login by Phone Number', link: ''
+            }
+          ]
+        },
+        {
+          text: 'Social',
+          collapsible: true,
+          items: [
+            {
+              text: 'Login by Wechat', link: ''
+            }
+          ]
+        },
+        {
+          text: 'Scan',
+          collapsible: true,
+          items: [
+            {
+              text: 'Generate QR code', link: ''
+            }
+          ]
+        },
+        {
+          text: 'MFA',
+          collapsible: true,
+          items: [
+            {
+              text: 'Email Verification', link: ''
+            }
+          ]
+        }
       ]
+    },
+
+    footer: {
+      message: 'Released under the MIT License.'
     }
   }
 }

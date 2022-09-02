@@ -16,8 +16,8 @@ export default class Button extends GuardElement {
         const type = this.getAttribute('type') || this.getType();
 
         const guard = Guard.getInstance(this);
-        var backgroundColor = '#FFF';
-        var textColor = '#606266';
+        let backgroundColor = '#FFF';
+        let textColor = '#606266';
         if (type === 'primary') {
             backgroundColor = guard.getAccentColor();
             textColor = '#FFF';
@@ -34,7 +34,8 @@ export default class Button extends GuardElement {
         this.button.style.border = this.getAttribute('border') || '1px solid #dcdfe6';
         this.button.style.color = this.getAttribute('color') || textColor;
 
-        this.button.innerText = this.innerHTML;
+        this.button.textContent = this.innerHTML;
+        this.innerHTML = '';
         this.button.style.cursor = 'pointer';
 
         this.container.append(this.button);

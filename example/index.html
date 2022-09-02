@@ -27,7 +27,7 @@
         guard.on('login', (code, message, userInfo) => {
             if (code === 200) {
                 console.log(userInfo);
-                guard.message.success('登录成功，欢迎你：' + userInfo.nickname);
+                guard.message.success('Welcome! ' + userInfo.nickname);
             } else {
                 guard.message.error(message);
             }

@@ -5896,7 +5896,7 @@
   "resolved" "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"
   "version" "0.3.0"
 
-"medium-zoom@^1.0.4":
+"medium-zoom@^1.0.4", "medium-zoom@^1.0.6":
   "integrity" "sha512-UdiUWfvz9fZMg1pzf4dcuqA0W079o0mpqbTnOz5ip4VGYX96QjmbM+OgOU/0uOzAytxC0Ny4z+VcYQnhdifimg=="
   "resolved" "https://registry.npmjs.org/medium-zoom/-/medium-zoom-1.0.6.tgz"
   "version" "1.0.6"
@@ -6085,11 +6085,6 @@
   "integrity" "sha1-G79asbqCevI1dRQ0kEJkVfSB/h4="
   "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz"
   "version" "0.3.0"
-
-"monaco-editor@^0.34.0":
-  "integrity" "sha512-VF+S5zG8wxfinLKLrWcl4WUizMx+LeJrG4PM/M78OhcwocpV0jiyhX/pG6Q9jIOhrb/ckYi6nHnaR5OojlOZCQ=="
-  "resolved" "https://registry.npmjs.org/monaco-editor/-/monaco-editor-0.34.0.tgz"
-  "version" "0.34.0"
 
 "move-concurrently@^1.0.1":
   "integrity" "sha1-viwAX9oy4LKa8fBdfEszIUxwH5I="
@@ -8762,10 +8757,10 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
-"vitepress@^1.0.0-alpha.8":
-  "integrity" "sha512-kTRN5DCagvMqr9OjylSV9/waGg0IHrxL0hBVuJoz7ykleZq2qR02n5CaiFq5QrSB/VRBGqiVsFQzet9vJsXS8g=="
-  "resolved" "https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-alpha.8.tgz"
-  "version" "1.0.0-alpha.8"
+"vitepress@^1.0.0-alpha.13":
+  "integrity" "sha512-gCbKb+6o0g5wHt2yyqBPk7FcvrB+MfwGtg1JMS5p99GTQR87l3b7symCl8o1ecv7MDXwJ2mPB8ZrYNLnQAJxLQ=="
+  "resolved" "https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-alpha.13.tgz"
+  "version" "1.0.0-alpha.13"
   dependencies:
     "@docsearch/css" "^3.2.1"
     "@docsearch/js" "^3.2.1"

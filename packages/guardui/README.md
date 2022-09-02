@@ -27,7 +27,6 @@ At it's core, Guard UI leverages the idea of semantic programming. So in order t
     <g-app-name marginBottom="20px"></g-app-name>
     <g-account-input marginBottom="20px" text=""></g-account-input>
     <g-password-input marginBottom="20px" text=""></g-password-input>
-    <g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>
     <g-login-button marginBottom="20px"></g-login-button>
   </g-guard-container>
 </g-guard>
@@ -38,11 +37,10 @@ At it's core, Guard UI leverages the idea of semantic programming. So in order t
   import { Guard } from 'https://unpkg.com/guard-ui/dist/index.mjs'
 
   const guard = await Guard.initialize({appId: "62ac18c93134e5fafcd29435"});
-
   guard.on('login', (code, message, userInfo) => {
     if (code === 200) {
       console.log(userInfo);
-      guard.message.success('登录成功，欢迎你：' + userInfo.nickname);
+      guard.message.success('Welcome! ' + userInfo.nickname);
     } else {
       guard.message.error(message);
     }

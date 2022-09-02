@@ -10,7 +10,7 @@ export default class LoginButton extends Button {
         this.button.style.fontSize = this.getAttribute('fontSize') || '16px';
         this.button.style.padding = this.getAttribute('padding') || '0px';
         if (this.button.innerText === undefined || this.button.innerText.length === 0) {
-            this.button.innerText = '登录'
+            this.button.textContent = '登录'
         }
 
         this.button.onclick = async ()=> {

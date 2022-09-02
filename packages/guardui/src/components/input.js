@@ -14,7 +14,8 @@ export default class Input extends GuardElement {
 
         this.input.setAttribute('type', 'text');
         this.input.setAttribute('value', this.getAttribute('text') || '');
-        this.input.setAttribute('placeholder', this.getAttribute('placeholder'));
+        this.input.setAttribute('placeholder', this.getAttribute('placeholder')) || '';
+        this.container.style.borderRadius = this.getAttribute('borderRadius') || '4px';
 
         this.container.append(this.input);
     }

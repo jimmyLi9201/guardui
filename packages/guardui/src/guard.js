@@ -97,6 +97,8 @@ export default class Guard {
     }
 
     async loginByAccount(account, password) {
+        // Note we cannot use window.crypto.subtle APIs because we used PKCS1Padding
+        // but window.crypto.subtle only supports OAEP padding
         const encrypt = new JSEncrypt();
         encrypt.setPublicKey(this.config.publicKey);
         const encrypted = encrypt.encrypt(password);

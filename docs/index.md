@@ -20,7 +20,7 @@ features:
   - title: Quick integration
     details: Build authentication page with only a few lines of code. Experience fast development like never before.
   - title: Easy for customization
-    details: Build your own page with our atomic components and use our simple APIs to customize your UI and auth flow.
+    details: Build your own page with our atomic components. Use our simple APIs to customize your UI and auth flow.
   - title: Web component
     details: Based on W3C's web component standard.
   - title: Light-weight

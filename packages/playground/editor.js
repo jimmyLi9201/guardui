@@ -13,7 +13,6 @@ require(['vs/editor/editor.main'], function () {
         <g-app-name marginBottom="20px"></g-app-name>
         <g-account-input marginBottom="20px"></g-account-input>
         <g-password-input marginBottom="20px"></g-password-input>
-        <g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>
         <g-login-button marginBottom="20px"></g-login-button>
     </g-guard-container>
 </g-guard>

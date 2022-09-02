@@ -1,6 +1,6 @@
 # Getting Started
 
-In this tutorial, let's build a custom login page and see how Guard UI works. Open your favorite code editor and create index.html.
+In this tutorial, let's build a simple login page and see how Guard UI works. Open your favorite code editor and create index.html.
 
 ## Step 1: Init
 
@@ -24,7 +24,6 @@ Note that script is of type "module"
         <g-app-name></g-app-name>
         <g-account-input></g-account-input>
         <g-password-input></g-password-input>
-        <g-error-text></g-error-text>
         <g-login-button></g-login-button>
     </g-guard-container>
 </g-guard>
@@ -47,7 +46,6 @@ complete code:
             <g-app-name marginBottom="20px"></g-app-name>
             <g-account-input marginBottom="20px" text=""></g-account-input>
             <g-password-input marginBottom="20px" text=""></g-password-input>
-            <g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>
             <g-login-button marginBottom="20px"></g-login-button>
         </g-guard-container>
     </g-guard>
