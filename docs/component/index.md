@@ -4,7 +4,7 @@ Guard UI provides bundch of authentication related UI components.
 
 ## Hierarchy
 
-![](./images/components.png){data-zoomable}
+<ZoomImg src="./images/components.png" />
 
 In this graph:
 

@@ -11,4 +11,4 @@ Component that has a tint color will change accordingly. For example a `g-button
 
 With code above, we will get a page like the following:
 
-<img src="./images/accent_color.png" />
+<ZoomImg src="./images/accent_color.png" />

@@ -77,6 +77,6 @@ If you try to load the HTML file locally (i.e. with a file:// URL), you'll run i
 
 with code above, your browser should show:
 
-<img src="./images/login_page.png"/>
+<ZoomImg src="./images/login_page.png"/>
 
 🎉 Congratulations! you have built a working login page.

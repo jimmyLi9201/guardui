@@ -24,4 +24,4 @@ If we align our `g-container` to the right by setting `justifyContent="flex-end"
 
 we will get a page like the following:
 
-<img src="./images/background_image.png" />
+<ZoomImg src="./images/background_image.png" />
