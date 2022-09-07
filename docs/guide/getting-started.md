@@ -29,7 +29,7 @@ Note that script is of type "module"
 </g-guard>
 ```
 
-## Step 3: Handling result
+## Step 3: Handle result
 
 ```javascript
 guard.on('login', (code, message, userInfo)=>{});

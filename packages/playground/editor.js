@@ -20,7 +20,7 @@ require(['vs/editor/editor.main'], function () {
     const defaultJS = 
 `import { Guard } from 'https://unpkg.com/guard-ui/dist/index.mjs'
 
-// 62345c87ffe7c884acbae53c
+// try change app ID to 62345c87ffe7c884acbae53c
 const guard = await Guard.initialize({appId: "62ac18c93134e5fafcd29435"});
 guard.on('login', (code, message, userInfo) => {
     if (code === 200) {
@@ -30,6 +30,9 @@ guard.on('login', (code, message, userInfo) => {
         guard.message.error(message);
     }
 });
+
+// try set another access color
+// guard.setAccentColor('#c50019');
 `
 
     // 定义编辑器主题
@@ -209,6 +212,7 @@ guard.on('login', (code, message, userInfo) => {
     jsEditor.getModel().onDidChangeContent(() => {
         const code = jsEditor.getValue();
         setInnerHTML(jsContainer, `<script type="module">
+            Guard.getInstance().setAccentColor('#396AFF');
             ${code}
             </script>
         `);

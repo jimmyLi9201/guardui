@@ -1,3 +1,5 @@
+import Router from "./router.js";
+
 export default class GuardElement extends HTMLElement {
 
     // for now, we don't use shadow
@@ -5,6 +7,9 @@ export default class GuardElement extends HTMLElement {
 
     shadow;
     container;
+
+    // used for route
+    path;
 
     constructor() {
         super();
@@ -16,6 +21,7 @@ export default class GuardElement extends HTMLElement {
             this.container = this;
         }
 
+        this.container.style.display = this.getAttribute('display') || 'block';
         this.container.style.flex = this.getAttribute('flex');
         this.container.style.width = this.getAttribute('width');
         this.container.style.height = this.getAttribute('height');
@@ -30,6 +36,8 @@ export default class GuardElement extends HTMLElement {
         this.container.style.backgroundSize = this.getAttribute('backgroundSize') || 'cover';
         this.container.style.backgroundImage = this.getAttribute('backgroundImage');
 
+        this.path = this.getAttribute('path') || '/';
+
         if (this.useShadow) {
             let template = document.createElement('template');
             let html = this.innerHTML.trim();
@@ -41,6 +49,12 @@ export default class GuardElement extends HTMLElement {
             
             this.appendChild(this.container)
             this.shadow.appendChild(this.container);
+        }
+    }
+
+    connectedCallback() {
+        if (this.parentElement instanceof Router) {
+            this.parentElement.updateRoute();
         }
     }
 

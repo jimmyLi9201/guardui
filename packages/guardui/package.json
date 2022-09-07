@@ -1,6 +1,6 @@
 {
   "name": "guard-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/guard-ui.mjs",
   "license": "MIT",
   "files": ["dist"],

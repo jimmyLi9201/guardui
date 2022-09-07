@@ -1,12 +1,12 @@
 import Guard from "../../guard.js";
 import LoadingButton from "../loadingButton.js";
 
-export default class LoginButton extends LoadingButton {
+export default class RegisterButton extends LoadingButton {
     constructor() {
         super();
 
         if (this.button.innerText === undefined || this.button.innerText.length === 0) {
-            this.button.textContent = '登录'
+            this.button.textContent = '注册'
         }
 
         this.button.onclick = async ()=> {
@@ -36,4 +36,4 @@ export default class LoginButton extends LoadingButton {
     }
 }
 
-window.customElements.define('g-login-button', LoginButton);
+window.customElements.define('g-register-button', RegisterButton);

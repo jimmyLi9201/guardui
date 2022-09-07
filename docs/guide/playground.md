@@ -8,7 +8,7 @@ Playground only works on Chrome and takes a while for initial download
 
 ## Instantly refresh
 
-As you `place` your components on the top left editor, the preview on the right will immediate update. This is the same for the javascript on the bottom left area.
+As you `place` your components on the top left editor, the preview on the right will immediate update. This is the same for the javascript on the bottom left editor.
 
 ## Code completion
 

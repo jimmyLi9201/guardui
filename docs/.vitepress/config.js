@@ -57,7 +57,6 @@ export default {
           collapsible: true,
           items: [
             { text: 'Initialize', link: '/guide/methods/initialize' },
-            { text: 'Get Guard Instance', link: '/guide/methods/get-guard-instance' },
             { text: 'Logout', link: '/guide/methods/logout' },
             { text: 'Handle Events', link: '/guide/methods/handle-events' },
             { text: 'Get User Info', link: '/guide/methods/get-user-info' },
