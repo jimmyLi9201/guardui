@@ -16,9 +16,9 @@
     <g-guard-container>
         <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
         <g-app-name marginBottom="20px"></g-app-name>
-        <g-account-input marginBottom="20px" text=""></g-account-input>
-        <g-password-input marginBottom="20px" text=""></g-password-input>
-        <g-password-confirm-input marginBottom="20px" text=""></g-password-confirm-input>
+        <g-account-input marginBottom="20px"></g-account-input>
+        <g-password-input marginBottom="20px"></g-password-input>
+        <g-password-confirm-input marginBottom="20px"></g-password-confirm-input>
         <g-register-button marginBottom="20px"></g-register-button>
     </g-guard-container>
 </g-guard>

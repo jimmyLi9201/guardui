@@ -143,6 +143,12 @@ guard.on('login', (code, message, userInfo) => {
                     insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
                 },
                 {
+                    label: 'password-confirm-input',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-password-confirm-input marginBottom="20px"></g-password-confirm-input>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
                     label: 'error-text',
                     kind: monaco.languages.CompletionItemKind.Snippet,
                     insertText: '<g-error-text marginTop="-15px" marginBottom="5px"></g-error-text>',
@@ -152,6 +158,12 @@ guard.on('login', (code, message, userInfo) => {
                     label: 'login-button',
                     kind: monaco.languages.CompletionItemKind.Snippet,
                     insertText: '<g-login-button marginBottom="20px"></g-login-button>',
+                    insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+                },
+                {
+                    label: 'register-button',
+                    kind: monaco.languages.CompletionItemKind.Snippet,
+                    insertText: '<g-register-button marginBottom="20px"></g-register-button>',
                     insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
                 }
             ];

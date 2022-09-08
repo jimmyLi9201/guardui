@@ -1,5 +1,6 @@
 import Guard from "../../guard.js";
 import LoadingButton from "../loadingButton.js";
+import Util from "../../util.js";
 
 export default class RegisterButton extends LoadingButton {
     constructor() {
@@ -10,9 +11,9 @@ export default class RegisterButton extends LoadingButton {
         }
 
         this.button.onclick = async ()=> {
-            const [accountInput] = this.getRootNode().firstChild.getElementsByTagName('g-account-input');
-            const [passwordInput] = this.getRootNode().firstChild.getElementsByTagName('g-password-input');
-            const [errorText] = this.getRootNode().firstChild.getElementsByTagName('g-error-text');
+            const accountInput = Util.findElement(this, 'g-account-input');
+            const passwordInput = Util.findElement(this, 'g-password-input');
+            const errorText = Util.findElement(this, 'g-error-text');
             if (errorText !== undefined) {
                 errorText.setError('');
             }
@@ -22,14 +23,14 @@ export default class RegisterButton extends LoadingButton {
                 const password = passwordInput.getText();
 
                 const guard = Guard.getInstance();
-                const res = await guard.loginByAccount(account, password);
+                const res = await guard.authClient.registerByUserName(account, password);
                 if (res.code === 200) {
-                    guard.dispatchEvent('login', 200, res.message, res.data);
+                    guard.dispatchEvent('register', 200, res.message, res.data);
                 } else {
                     if (errorText !== undefined) {
                         errorText.setError(res.message);
                     }
-                    guard.dispatchEvent('login', res.code, res.message, null);
+                    guard.dispatchEvent('register', res.code, res.message, null);
                 }
             }
         };

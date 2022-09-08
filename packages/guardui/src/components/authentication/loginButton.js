@@ -1,5 +1,6 @@
 import Guard from "../../guard.js";
 import LoadingButton from "../loadingButton.js";
+import Util from "../../util.js";
 
 export default class LoginButton extends LoadingButton {
     constructor() {
@@ -10,9 +11,9 @@ export default class LoginButton extends LoadingButton {
         }
 
         this.button.onclick = async ()=> {
-            const [accountInput] = this.getRootNode().firstChild.getElementsByTagName('g-account-input');
-            const [passwordInput] = this.getRootNode().firstChild.getElementsByTagName('g-password-input');
-            const [errorText] = this.getRootNode().firstChild.getElementsByTagName('g-error-text');
+            const accountInput = Util.findElement(this, 'g-account-input');
+            const passwordInput = Util.findElement(this, 'g-password-input');
+            const errorText = Util.findElement(this, 'g-error-text');
             if (errorText !== undefined) {
                 errorText.setError('');
             }
@@ -22,7 +23,7 @@ export default class LoginButton extends LoadingButton {
                 const password = passwordInput.getText();
 
                 const guard = Guard.getInstance();
-                const res = await guard.loginByAccount(account, password);
+                const res = await guard.authClient.loginByAccount(account, password);
                 if (res.code === 200) {
                     guard.dispatchEvent('login', 200, res.message, res.data);
                 } else {

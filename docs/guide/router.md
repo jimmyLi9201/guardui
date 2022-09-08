@@ -34,7 +34,7 @@ We wrap two `g-guard-container` inside `g-router`. Then we set `path` attribute 
 </g-router>
 ```
 
-Inside the first `g-guard-container`, we add one button with `type="link"`. When user clicks on it, it will look for `to` attribute and route to that path which is the same as the second `g-guard-container` 's `path` attribute.
+Inside the first `g-guard-container`, we add one button with `type="link"`. When user clicks on it, it will look for `to` attribute and route to that path.
 
 ::: tip
 Browser's `back` and `forward` button should work as expected
@@ -68,8 +68,8 @@ Now we add all the components in both pages
         <g-guard-container path="/">
             <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
             <g-app-name marginBottom="20px"></g-app-name>
-            <g-account-input marginBottom="20px" text=""></g-account-input>
-            <g-password-input marginBottom="20px" text=""></g-password-input>
+            <g-account-input marginBottom="20px"></g-account-input>
+            <g-password-input marginBottom="20px"></g-password-input>
             <g-login-button marginBottom="20px"></g-login-button>
             <g-button type="link" marginBottom="20px">Register Now</g-button>
         </g-guard-container>
@@ -77,9 +77,9 @@ Now we add all the components in both pages
         <g-guard-container path="/register">
             <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
             <g-app-name marginBottom="20px"></g-app-name>
-            <g-account-input marginBottom="20px" text=""></g-account-input>
-            <g-password-input marginBottom="20px" text=""></g-password-input>
-            <g-password-confirm-input marginBottom="20px" text=""></g-password-confirm-input>
+            <g-account-input marginBottom="20px"></g-account-input>
+            <g-password-input marginBottom="20px"></g-password-input>
+            <g-password-confirm-input marginBottom="20px"></g-password-confirm-input>
             <g-register-button marginBottom="20px"></g-register-button>
             <g-button type="back" marginBottom="20px">Back to Login</g-button>
         </g-guard-container>
