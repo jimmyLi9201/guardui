@@ -71,7 +71,7 @@ Now we add all the components in both pages
             <g-account-input marginBottom="20px"></g-account-input>
             <g-password-input marginBottom="20px"></g-password-input>
             <g-login-button marginBottom="20px"></g-login-button>
-            <g-button type="link" marginBottom="20px">Register Now</g-button>
+            <g-button type="link" to="/register" marginBottom="20px">Register Now</g-button>
         </g-guard-container>
 
         <g-guard-container path="/register">

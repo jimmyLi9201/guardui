@@ -8,13 +8,26 @@ require(['vs/editor/editor.main'], function () {
 
     var defaultHTML = 
 `<g-guard>
-    <g-guard-container>
-        <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
-        <g-app-name marginBottom="20px"></g-app-name>
-        <g-account-input marginBottom="20px"></g-account-input>
-        <g-password-input marginBottom="20px"></g-password-input>
-        <g-login-button marginBottom="20px"></g-login-button>
-    </g-guard-container>
+    <g-router>
+        <g-guard-container path="/">
+            <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
+            <g-app-name marginBottom="20px"></g-app-name>
+            <g-account-input marginBottom="20px"></g-account-input>
+            <g-password-input marginBottom="20px"></g-password-input>
+            <g-login-button marginBottom="20px"></g-login-button>
+            <g-button type="link" to="/register" marginBottom="20px">Register Now</g-button>
+        </g-guard-container>
+
+        <g-guard-container path="/register">
+            <g-app-logo marginTop="24px" marginBottom="24px"></g-app-logo>
+            <g-app-name marginBottom="20px"></g-app-name>
+            <g-account-input marginBottom="20px"></g-account-input>
+            <g-password-input marginBottom="20px"></g-password-input>
+            <g-password-confirm-input marginBottom="20px"></g-password-confirm-input>
+            <g-register-button marginBottom="20px"></g-register-button>
+            <g-button type="back" marginBottom="20px">Back to Login</g-button>
+        </g-guard-container>
+    </g-router>
 </g-guard>
 `
     const defaultJS = 
