@@ -15,7 +15,7 @@ require(['vs/editor/editor.main'], function () {
             <g-account-input marginBottom="20px"></g-account-input>
             <g-password-input marginBottom="20px"></g-password-input>
             <g-login-button marginBottom="20px"></g-login-button>
-            <g-button type="link" to="/register" marginBottom="20px">Register Now</g-button>
+            <g-button type="link" to="/register" marginBottom="20px">立即注册</g-button>
         </g-guard-container>
 
         <g-guard-container path="/register">
@@ -25,7 +25,7 @@ require(['vs/editor/editor.main'], function () {
             <g-password-input marginBottom="20px"></g-password-input>
             <g-password-confirm-input marginBottom="20px"></g-password-confirm-input>
             <g-register-button marginBottom="20px"></g-register-button>
-            <g-button type="back" marginBottom="20px">Back to Login</g-button>
+            <g-button type="back" marginBottom="20px">返回登录</g-button>
         </g-guard-container>
     </g-router>
 </g-guard>
@@ -44,7 +44,7 @@ guard.on('login', (code, message, userInfo) => {
     }
 });
 
-// try set another access color
+// try set another accent color
 // guard.setAccentColor('#c50019');
 `
 

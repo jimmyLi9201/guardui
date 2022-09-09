@@ -89,6 +89,8 @@ Now we add all the components in both pages
 
 🎉 Congratulations! you have built a working authentication app with navigable login and register pages.
 
+Try it out at [Guard UI Playground](http://wecloudapp.com/guard-ui-playground/)
+
 ::: warning
 Currently Guard router only implements basic nagivation. It doesn't support any advanced routing feature compare to React Router or Vue Router.
 :::
