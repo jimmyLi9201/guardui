@@ -1,6 +1,6 @@
 # Component
 
-Guard UI provides bundch of authentication related UI components.
+Guard UI provides bunch of authentication related UI components.
 
 ## Hierarchy
 
