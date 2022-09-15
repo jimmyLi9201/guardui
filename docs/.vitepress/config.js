@@ -14,7 +14,6 @@ export default {
     nav: [
       { text: 'Guide', link: '/guide/'},
       { text: 'Component', link: '/component/' },
-      { text: 'APIs', link: '/apis/' },
       // {
       //   text: 'Dropdown Menu',
       //   items: [
